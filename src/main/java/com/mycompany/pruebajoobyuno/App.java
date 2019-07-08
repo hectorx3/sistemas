@@ -8,7 +8,7 @@ import org.jooby.Jooby;
 public class App extends Jooby {
 
   {
-    get("/", () -> "Hola Suemy Solano ya dile que si :v");
+    get("/", () -> "Hola Suemy Solano ya dile que si otra vez");
   }
 
   public static void main(final String[] args) {
