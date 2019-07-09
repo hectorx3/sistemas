@@ -1,0 +1,16 @@
+[Unit]
+Description=PruebaJoobyUno
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/PruebaJoobyUno
+ExecStart=/opt/PruebaJoobyUno/bin/PruebaJoobyUno --exec
+ExecStop=/opt/PruebaJoobyUno/bin/PruebaJoobyUno --stop
+PIDFile=/opt/PruebaJoobyUno/run/PruebaJoobyUno.pid
+KillMode=process
+Restart=on-failure
+User=
+Group=
+
+[Install]
+WantedBy=multi-user.target
