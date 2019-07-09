@@ -203,6 +203,7 @@
  */
 package com.mycompany.pruebajoobyuno;
 
+import com.typesafe.config.Config;
 import org.jooby.Jooby;
 
 /**
@@ -213,10 +214,18 @@ public class App extends Jooby {
   {
     get("/", () -> "Hello Wey!");
     get("/home", () -> "Bienvenido al curso de Udemy!");
+    get("/", (req,res) -> {
+    Config conf = require(Config.class);
+    String myprop = conf.getString("myprop");
+  });
+    
+    Config c = require(Config.class);
+    String uri = c.getString("db.url");
+    System.out.println(uri);
   }
 
   public static void main(final String[] args) {
     run(App::new, args);
   }
-
+  
 }

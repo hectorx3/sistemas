@@ -61,6 +61,18 @@
         <artifactId>jooby-jdbc</artifactId>
         <version>1.6.2</version>
     </dependency>
+    
+    <dependency>
+        <groupId>org.jdbi</groupId>
+        <artifactId>jdbi3-core</artifactId>
+    </dependency>
+    
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>3.3.1</version>
+    </dependency>    
+    
   </dependencies>
 
   <build>
